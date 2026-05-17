@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Booking System</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      background: white;
+      padding: 30px;
+      width: 400px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input,
+    select,
+    textarea,
+    button {
+      padding: 12px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    textarea {
+      height: 100px;
+      resize: none;
+    }
+
+    button {
+      background: black;
+      color: white;
+      cursor: pointer;
+      border: none;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    #message {
+      margin-top: 15px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Book Appointment</h1>
+    <form id="bookingForm">
+      <input type="text" id="name" placeholder="Full Name" required/>
+
+      <input type="tel" id="phone" placeholder="Phone Number" required/>
+
+      <select id="service" required>
+        <option value="">Select Service</option>
+        <option value="Eye Examination">Eye Examination</option>
+        <option value="Driver's Screening">Driver's Screening</option>
+        <option value="Consultation">Consultation</option>
+      </select>
+
+      <input type="date" id="date" required />
+
+      <input type="time" id="time" required/>
+
+      <textarea id="notes" placeholder="Additional Notes"></textarea>
+
+      <button type="submit">Book Now</button>
+    </form>
+    <p id="message"></p>
+  </div>
+  <script src="app.js"></script>
+</body>
+<!--https://nbdmijocurozclrudklr.supabase.co/bookings-->
+</html>
