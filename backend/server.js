@@ -14,7 +14,12 @@ const supabase = createClient(
   process.env.SUPABASE_KEY
 );
 
+app.get("/", (req, res) => {
+  res.send("API Running...");
+});
+
 app.post("/bookings", async (req, res) => {
+
   try {
 
     const {
@@ -60,6 +65,7 @@ app.post("/bookings", async (req, res) => {
     });
 
   }
+
 });
 
 const PORT = 5000;
